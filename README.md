@@ -1,0 +1,1 @@
+# The coral reef model consists of a 5x5 grid with live/dead coral tiles to represent coral mortality year to year. With different  conditions based on a given year/environmental disaster, roll two dice to determine whether a coral tile "lives" or "dies" for each year. 
