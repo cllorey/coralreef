@@ -1,16 +1,7 @@
+source("R/util.R")
 set.seed(221)
 
-reef <- matrix(0, nrow = 5, ncol = 5)
-random_coral <- sample (1:25, size = 8)
-
-for (rc in random_coral) {
-    rc_row <- (rc - 1) %/% 5 + 1
-    rc_col <- (rc - 1) %% 5 + 1
-    reef[rc_row, rc_col] <- 1
-}
-reef
-
-print(reef)
+reef <- random_reef(coral_number = 8)
 
 years <- seq(2004, 2024, by = 2)
 coral_cover_pct <- integer(11) 
