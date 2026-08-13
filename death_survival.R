@@ -5,11 +5,8 @@ reef <- random_reef(coral_number = 8)
 
 years <- seq(2004, 2024, by = 2)
 coral_cover_pct <- integer(11) 
-years
-coral_cover_pct
 
 coral_cover_pct[1] <- mean(reef)
-coral_cover_pct
 
 for (t in 2:length(coral_cover_pct)) {
   prev_reef <- reef
@@ -22,7 +19,11 @@ for (t in 2:length(coral_cover_pct)) {
         if (coral_outcome <= 3) {
           print("Coral died")
           reef[r, c] <- 0 
-        } else {
+        } else if (coral_outcome >= 6) {
+          print("Coral grew")
+          reef[r, c] <- 1 # LATER, add growth offset conditions
+        } 
+        else {
           print("Coral survived")
           reef[r, c] <- 1 
         }

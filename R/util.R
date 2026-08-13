@@ -14,3 +14,15 @@ random_reef <- function(coral_number) {
   
   return(reef)
 }
+
+# This is probably wrong/not to be included - more likely need to take the longer step 8 function from death_survival and put it here
+coral_fate <- function(roll, mort_thr, grow_thr) {
+  if (roll <= mort_thr) {
+    fate <- "death :("
+  } else if (roll >= grow_thr) {
+    fate <- "growth :)"
+  } else {
+    fate <- "survival :|"
+  }
+  return(fate)
+}
