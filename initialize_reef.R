@@ -20,3 +20,5 @@ cell_row <- (6-1) %/% 5 + 1
 cell_col <- (6-1) %% 5 + 1
 coral_matrix[cell_row, cell_col] <- 1
 coral_matrix
+
+source("R/util.R")
